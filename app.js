@@ -1,8 +1,10 @@
 var express = require('express');
 var app = express();
 
-app.use(express.static('public'));
+var notify = require('./routes/notify');
 
+app.use(express.static('public'));
+app.use('/notify',notify);
 app.listen(8000, () => console.log("Listening on 8000"));
 
 module.exports = app;
