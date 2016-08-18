@@ -1,7 +1,7 @@
 var notify = require('express').Router();
 
 var twilioClient = require('../twilioClient');
-var admins = require('../config/users.json');
+var users = require('../config/users.json');
 
 function formatMessage(errorToReport) {
   return '[This is a test] ALERT! It appears the server is' +
@@ -12,10 +12,10 @@ function formatMessage(errorToReport) {
 
 function notifyOnError(appError) {
   console.log("notifying, maybe")
-  admins.forEach(function(admin) {
+  users.forEach(function(user) {
     console.log("sending to user");
     var messageToSend = formatMessage("appError.message");
-    twilioClient.sendSms(admin.phoneNumber, messageToSend);
+    twilioClient.sendSms(user.phoneNumber, messageToSend);
   });
 };
 
