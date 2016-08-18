@@ -1,0 +1,24 @@
+{
+  "name": "wheres-my-plane",
+  "version": "1.0.0",
+  "description": "Flight tracker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SPHornsby/wheres-my-plane.git"
+  },
+  "author": "Sean Hornsby",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SPHornsby/wheres-my-plane/issues"
+  },
+  "homepage": "https://github.com/SPHornsby/wheres-my-plane#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "request": "^2.74.0",
+    "twilio": "^2.9.2"
+  }
+}
